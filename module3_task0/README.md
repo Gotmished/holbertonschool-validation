@@ -51,3 +51,5 @@ Prints out information of the commands to the terminal.
 `post`:
 Creates a new post in the contents/post folder with POST_TITLE and POST_NAME
 set from the ENV variables.
+
+### Workflow
