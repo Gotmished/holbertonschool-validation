@@ -1,17 +1,19 @@
 name: module3_task0
 on:
-	push:
-		branches:
-		- main
-	schedule:
-	- cron: "8 8 * * *"
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "8 8 * * *"
+
 jobs:
-	module3_task0:
-		runs-on: ubuntu-latest
-		steps:
-		- name: Clone and check out repository
-		  uses: actions/checkout@v3
-		- name: position self in correct directory
-		  run: |
-		       cd module3_task0
-		       make help
+  module3_task0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone and check out repository
+        uses: actions/checkout@v3
+      - name: position self in correct directory
+        run: |
+          cd module3_task0
+          make help
+>>>>>>> 18fcbf3a5a0ddb4fbc41defbc651f21bd6e58e61
