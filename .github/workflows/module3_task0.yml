@@ -16,4 +16,3 @@ jobs:
         run: |
           cd module3_task0
           make help
->>>>>>> 18fcbf3a5a0ddb4fbc41defbc651f21bd6e58e61
