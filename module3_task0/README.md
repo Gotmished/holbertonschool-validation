@@ -52,4 +52,16 @@ Prints out information of the commands to the terminal.
 Creates a new post in the contents/post folder with POST_TITLE and POST_NAME
 set from the ENV variables.
 
-### Workflow
+---
+
+## Workflow
+
+Currently making use of Github action to:
+
+-   Clone the repository
+-   Position self in the correct directory and execute the command `make help` to validate that the Makefile is present, and implement the help target check.
+
+It is triggered:
+
+-   Each time new code is pushed to the repository
+-   Once a day at 8:08 a.m.
