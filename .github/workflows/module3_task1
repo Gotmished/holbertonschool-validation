@@ -1,0 +1,23 @@
+name: module3_task1
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "8 8 * * *"
+
+jobs:
+  module3_task0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone and check out repository
+        uses: actions/checkout@v3
+      - name: Run setup script to install Hugo
+        run: |
+          cd module3_task1/
+          ./setup.sh
+        shell: bash
+      - name: Use build in Makefile
+        run: |
+          cd module3_task1
+          make build
