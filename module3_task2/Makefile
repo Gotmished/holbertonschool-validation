@@ -10,7 +10,7 @@ clean:	## Cleans up the content of the dist/ directory
 
 package:	## Creates a zip file containing binary and dist/ directory
 	@make build
-	@zip awesome-website.zip dist/
+	@zip awesome-website.zip dist/index.html
 
 unit-tests:	## Tests various make recipes
 	@make package
