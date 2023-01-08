@@ -12,5 +12,9 @@ package:	## Creates a zip file containing binary and dist/ directory
 	@make build
 	@zip awesome-website.zip dist/
 
+unit-tests:	## Tests various make recipes
+	@make package
+	@make clean
+
 help:	## Prints a list of targets and their usage
 	@cat Makefile | grep '##' | tr -d '##' | head -n -1

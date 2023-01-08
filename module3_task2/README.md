@@ -46,6 +46,12 @@ Prints out information of the commands to the terminal.
 Creates a new post in the contents/post folder with POST_TITLE and POST_NAME
 set from the ENV variables.
 
+'package':
+Creates a zip archive of the latest build, and stores in awesome-website.zip
+
+'unit-tests':
+Runs each make recipe
+
 ## Workflow
 
 Currently making use of Github action to:
