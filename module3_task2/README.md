@@ -58,6 +58,9 @@ Begins a server and checks localhost URL
 'validate':
 Checks the current working directory
 
+'lint':
+Applies markdown lint to README and DEPLOY files
+
 ## Workflow
 
 Currently making use of Github action to:
