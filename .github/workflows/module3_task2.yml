@@ -1,0 +1,29 @@
+---
+name: module3_task2
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: 8 8 * * *
+jobs:
+  module3_task2:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone and check out repository
+        uses: actions/checkout@v3
+      - name: Run setup script to install Hugo
+        run: |
+          cd module3_task2/
+          ./setup.sh
+        shell: bash
+      - name: Package
+        run: |
+          cd module3_task2
+          make package
+      - name: Archive following successful build with make package
+      	if: ${{ success() }}
+	uses: actions/upload-artifact@v3
+	with:
+          name: upload-package
+          path: module3_task2/awesome-website.zip
