@@ -20,5 +20,8 @@ integration-tests:	## Start a server and check localhost URL
 	@hugo
 	@ls dist/
 
+validate:	## Checks the current working directory
+	@pwd
+
 help:	## Prints a list of targets and their usage
 	@cat Makefile | grep '##' | tr -d '##' | head -n -1

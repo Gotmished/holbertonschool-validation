@@ -55,6 +55,9 @@ Runs each make recipe
 'integration-tests':
 Begins a server and checks localhost URL
 
+'validate':
+Checks the current working directory
+
 ## Workflow
 
 Currently making use of Github action to:
