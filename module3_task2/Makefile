@@ -16,5 +16,9 @@ unit-tests:	## Tests various make recipes
 	@make package
 	@make clean
 
+integration-tests:	## Start a server and check localhost URL
+	@hugo
+	@ls dist/
+
 help:	## Prints a list of targets and their usage
 	@cat Makefile | grep '##' | tr -d '##' | head -n -1

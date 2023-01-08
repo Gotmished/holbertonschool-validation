@@ -22,8 +22,8 @@ jobs:
           cd module3_task2
           make package
       - name: Archive
-      	if: ${{ success() }}
-	uses: actions/upload-artifact@v3
-	with:
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v3
+        with:
           name: upload-package
           path: module3_task2/awesome-website.zip

@@ -52,6 +52,9 @@ Creates a zip archive of the latest build, and stores in awesome-website.zip
 'unit-tests':
 Runs each make recipe
 
+'integration-tests':
+Begins a server and checks localhost URL
+
 ## Workflow
 
 Currently making use of Github action to:
