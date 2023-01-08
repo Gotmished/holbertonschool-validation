@@ -21,7 +21,7 @@ jobs:
         run: |
           cd module3_task2
           make package
-      - name: Archive following successful build with make package
+      - name: Archive
       	if: ${{ success() }}
 	uses: actions/upload-artifact@v3
 	with:
