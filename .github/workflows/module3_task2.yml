@@ -21,6 +21,10 @@ jobs:
         run: |
           cd module3_task2
           make package
+      - name: Lint
+        run: |
+          cd module3_task2
+          make lint
       - name: Archive
         if: ${{ success() }}
         uses: actions/upload-artifact@v3
