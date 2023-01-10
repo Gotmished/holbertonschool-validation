@@ -17,6 +17,10 @@ jobs:
           cd module3_task2/
           ./setup.sh
         shell: bash
+      - name: Build
+        run: |
+          cd module3_task2
+          make build
       - name: Package
         run: |
           cd module3_task2
