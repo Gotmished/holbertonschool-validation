@@ -69,8 +69,13 @@ Currently making use of Github actions to:
 - Position self in the correct directory and execute
 the command `make help` to validate that the
 Makefile is present, and implement the help target check.
+- Build the package
+- Archive the package
+- Test make recipes
+- Release the package alongside deployment documentation
 
 It is triggered:
 
 - Each time new code is pushed to the repository
 - Once a day at 8:08 a.m.
+- Release occurs when tag 1.0.0 is encountered

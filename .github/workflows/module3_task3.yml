@@ -16,7 +16,7 @@ jobs:
           cd module3_task3/
           ./setup.sh
         shell: bash
-      - name: Build and create package
+      - name: Build and store to create a package
         run: |
           cd module3_task3
           make package
