@@ -17,11 +17,7 @@ jobs:
           cd module3_task2/
           ./setup.sh
         shell: bash
-      - name: Build
-        run: |
-          cd module3_task2
-          make build
-      - name: Package
+      - name: Build and create package
         run: |
           cd module3_task2
           make package
@@ -29,7 +25,15 @@ jobs:
         run: |
           cd module3_task2
           make lint
-      - name: Archive
+      - name: Integration-tests
+        run: |
+          cd module3_task2
+	  make build
+	  make validate
+	  make integration-tests
+          make unit-tests
+	  make clean
+      - name: Archive package
         if: ${{ success() }}
         uses: actions/upload-artifact@v3
         with:
