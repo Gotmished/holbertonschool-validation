@@ -28,11 +28,11 @@ jobs:
       - name: Integration-tests
         run: |
           cd module3_task2
-	  make build
-	  make validate
-	  make integration-tests
+          make build
+          make validate
+          make integration-tests
           make unit-tests
-	  make clean
+          make clean
       - name: Archive package
         if: ${{ success() }}
         uses: actions/upload-artifact@v3
