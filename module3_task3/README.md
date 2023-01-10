@@ -1,5 +1,4 @@
-# Module 3: Introduction to DevOps: Automate Everything
-to Focus on What Really Matters
+# Module 3: An Introduction To DevOps
 
 ## Learning Objectives
 
