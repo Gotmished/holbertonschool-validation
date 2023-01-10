@@ -4,7 +4,11 @@
 
 ## Learning Objectives
 
-This project aims at showing use cases where a DevOps mindset is bringing value to a software project by automating it, which decreases the amount of manual work and increases the development speed. It focuses on why automation is useful and helps speeding a development lifecycle.
+This project aims at showing use cases where a DevOps
+mindset is bringing value to a software project by
+automating it, which decreases the amount of manual
+work and increases the development speed. It focuses
+on why automation is useful and helps speeding a development lifecycle.
 
 After this project, you should be able to:
 
@@ -18,7 +22,8 @@ After this project, you should be able to:
 
 - An HTML5-compliant web browser (Firefox, Chrome, Opera, Safari, Edge, etc.)
 - A free account on [GitHub](https://github.com/), referenced as `GitHub Handle`
-- A shell terminal with bash, zsh or ksh, including the standard Unix toolset (ls, cd, etc.)
+- A shell terminal with bash, zsh or ksh, including the
+standard Unix toolset (ls, cd, etc.)
 - [GNU](https://www.gnu.org/software/make/) Make in version 3.81+
 - Git (command line) in version 2+
 - [Go Hugo](https://gohugo.io/) v0.80+
@@ -29,7 +34,8 @@ After this project, you should be able to:
 
 - An HTML5-compliant web browser (Firefox, Chrome, Opera, Safari, Edge, etc.)
 - A free account on [GitHub](https://github.com/), referenced as `GitHub Handle`
-- A shell terminal with bash, zsh or ksh, including the standard Unix toolset (ls, cd, etc.)
+- A shell terminal with bash, zsh or ksh, including
+the standard Unix toolset (ls, cd, etc.)
 - [GNU](https://www.gnu.org/software/make/) Make in version 3.81+
 - Git (command line) in version 2+
 - [Go Hugo](https://gohugo.io/) v0.80+
