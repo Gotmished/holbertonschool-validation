@@ -1,8 +1,13 @@
-# Module 3: Introduction to DevOps: Automate Everything to Focus on What Really Matters
+# Module 3: Introduction to DevOps: Automate Everything
+to Focus on What Really Matters
 
 ## Learning Objectives
 
-This project aims at showing use cases where a DevOps mindset is bringing value to a software project by automating it, which decreases the amount of manual work and increases the development speed. It focuses on why automation is useful and helps speeding a development lifecycle.
+This project aims to show use cases where a DevOps
+approach is of use toward a software project through automation,
+decreasing the amount of manual work and increasing the
+development speed. It focuses on the usefulness of automation,
+and helps to hasten the development lifecycle.
 
 ## Lifecycle
 
@@ -42,19 +47,19 @@ Prints out information of the commands to the terminal.
 Creates a new post in the contents/post folder with POST_TITLE and POST_NAME
 set from the ENV variables.
 
-'package':
+`package`:
 Creates a zip archive of the latest build, and stores in awesome-website.zip
 
-'unit-tests':
+`unit-tests`:
 Runs each make recipe
 
-'integration-tests':
+`integration-tests`:
 Begins a server and checks localhost URL
 
-'validate':
+`validate`:
 Checks the current working directory
 
-'lint':
+`lint`:
 Applies markdown lint to README and DEPLOY files
 
 ## Workflow
