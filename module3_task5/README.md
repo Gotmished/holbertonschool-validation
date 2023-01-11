@@ -82,4 +82,5 @@ It is triggered:
 - Deployment occurs upon each pull request
 
 ## Author
+
 Hamish Ross | https://github.com/Gotmished
