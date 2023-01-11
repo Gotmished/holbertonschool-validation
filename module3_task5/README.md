@@ -83,4 +83,4 @@ It is triggered:
 
 ## Author
 
-Hamish Ross | https://github.com/Gotmished
+Hamish Ross - [https://github.com/Gotmished]
