@@ -13,7 +13,7 @@ package:	## Creates a zip file containing binary and dist/ directory
 	@make build
 	@zip awesome-website.zip dist/index.html
 
-unit-tests:	## Tests various make recipes
+unit-tests:	## Tests a variety of make recipes
 	@make build
 	@make clean
 	@touch coverage-units.out
