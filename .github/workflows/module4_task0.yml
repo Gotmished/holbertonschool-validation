@@ -31,6 +31,7 @@ jobs:
         run: |
           cd module4_task0
           make lint
+
       - name: Integration-tests
         run: |
           cd module4_task0
@@ -38,12 +39,14 @@ jobs:
           make integration-tests
           make unit-tests
           make clean
+
       - name: Archive package
         if: ${{ success() }}
         uses: actions/upload-artifact@v3
         with:
           name: upload-package
           path: module4_task0/awesome-website.zip
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
@@ -51,6 +54,7 @@ jobs:
           files: |
             module3_task5/awesome-website.zip
             module3_task5/DEPLOY.md
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
