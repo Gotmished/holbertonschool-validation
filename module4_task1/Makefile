@@ -1,12 +1,12 @@
 build-docker:	## Builds a Docker image
 	@docker build -t awesome:build -f build/Dockerfile .
 
-build:		## Runs a Docker image, and generates a website
-	@docker run -dp 1313:1313 awesome:build
+build:		## Runs a Docker image and builds website and api
+	@docker run -dp 1313:1313 awesome:build make build-website
+	@docker run -dp 1313:1313 awesome:build touch awesome-api
 
-create:	## Generates website from markdown and configuration files in dist/ directory
-	@make build "hugo; ls ./dist/*"
-	@touch awesome-api
+build-website:# Build the website
+	@hugo --source . --destination dist
 
 post:	## Creates a new blog post whose name and title come from env variables
 	@hugo new posts/$(POST_NAME).md
@@ -16,7 +16,7 @@ clean:	## Cleans up the content of the dist/ directory
 	@rm -rf dist/*
 
 package:	## Creates a zip file containing binary and dist/ directory
-	@make create
+	@make build
 	@zip awesome-website.zip dist/index.html
 
 unit-tests:
