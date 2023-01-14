@@ -1,5 +1,5 @@
 build-docker:	## Builds a Docker image
-	@docker build -t awesome:build docker/Dockerfile .
+	@docker build -t awesome:build -f docker/Dockerfile .
 
 run-docker:		## Runs a Docker image
 	@docker run -dp 1313:1313 awesome:build
