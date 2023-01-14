@@ -19,11 +19,10 @@ package:	## Creates a zip file containing binary and dist/ directory
 	@make build
 	@zip awesome-website.zip dist/index.html
 
-unit-tests:	## Tests a variety of make recipes
+unit-tests:
 	@touch coverage-units.out
 
-integration-tests:	## Start a server and check localhost URL
-	@hugo
+integration-tests:
 	@touch coverage-integrations.out
 	@ls dist/
 
