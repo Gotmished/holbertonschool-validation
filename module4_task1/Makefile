@@ -24,7 +24,6 @@ unit-tests:
 
 integration-tests:
 	@touch coverage-integrations.out
-	@ls dist/
 
 validate:	## Checks the current working directory
 	@pwd
