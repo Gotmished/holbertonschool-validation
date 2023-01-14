@@ -1,10 +1,10 @@
 build-docker:	## Builds a Docker image
 	@docker build -t awesome:build -f build/Dockerfile .
 
-run-docker:		## Runs a Docker image
+build:		## Runs a Docker image
 	@docker run -dp 1313:1313 awesome:build
 
-build:	## Generates website from markdown and configuration files in dist/ directory
+old-build:	## Generates website from markdown and configuration files in dist/ directory
 	@hugo
 	@touch awesome-api
 
@@ -20,8 +20,6 @@ package:	## Creates a zip file containing binary and dist/ directory
 	@zip awesome-website.zip dist/index.html
 
 unit-tests:	## Tests a variety of make recipes
-	@make build
-	@make clean
 	@touch coverage-units.out
 
 integration-tests:	## Start a server and check localhost URL
