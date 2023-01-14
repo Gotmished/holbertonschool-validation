@@ -4,6 +4,10 @@ build-docker:	## Builds a Docker image
 run-docker:		## Runs a Docker image
 	@docker run -dp 1313:1313 awesome:build
 
+build:	## Generates website from markdown and configuration files in dist/ directory
+	@hugo
+	@touch awesome-api
+
 post:	## Creates a new blog post whose name and title come from env variables
 	@hugo new posts/$(POST_NAME).md
 	@sed -i '2s/.*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
