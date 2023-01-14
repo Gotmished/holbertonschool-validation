@@ -1,11 +1,11 @@
 build-docker:	## Builds a Docker image
 	@docker build -t awesome:build -f build/Dockerfile .
 
-build:		## Runs a Docker image
-	@docker run -dp 1313:1313 awesome:build sh -c "hugo; ls ./dist/*"
+build:		## Runs a Docker image, and generates a website
+	@docker run -dp 1313:1313 awesome:build
 
 create:	## Generates website from markdown and configuration files in dist/ directory
-	@make build
+	@make build "hugo; ls ./dist/*"
 	@touch awesome-api
 
 post:	## Creates a new blog post whose name and title come from env variables
