@@ -18,6 +18,7 @@ jobs:
       - name: Docker run
         run: |
           cd module4_task1
+          make clean
           make build-docker
           make run-docker
           ./setup.sh
