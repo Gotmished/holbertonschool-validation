@@ -31,7 +31,7 @@ validate:	## Checks the current working directory
 	@pwd
 
 lint:	## Apply lint to README and DEPLOY files
-	@markdownlint README.md DEPLOY.md
+	@yamllint README.md DEPLOY.md
 
 help:	## Prints a list of targets and their usage
 	@cat Makefile | grep '##' | tr -d '##' | head -n -1
