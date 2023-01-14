@@ -4,7 +4,8 @@ build-docker:	## Builds a Docker image
 build:		## Runs a Docker image
 	@docker run -dp 1313:1313 awesome:build
 
-old-build:	## Generates website from markdown and configuration files in dist/ directory
+create:	## Generates website from markdown and configuration files in dist/ directory
+	@make build
 	@hugo
 	@touch awesome-api
 
@@ -29,6 +30,7 @@ validate:	## Checks the current working directory
 	@pwd
 
 lint:	## Apply lint to README and DEPLOY files
+	@make build
 	@yamllint README-test.md
 
 help:	## Prints a list of targets and their usage
