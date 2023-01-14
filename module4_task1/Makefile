@@ -1,6 +1,8 @@
-build:	## Generates website from markdown and configuration files in dist/ directory
-	@hugo
-	@touch awesome-api
+build-docker:	## Builds a Docker image
+	@docker build -t awesome-api .
+
+run-docker:		## Runs a Docker image
+	@docker run -dp 1313:1313 awesome:build
 
 post:	## Creates a new blog post whose name and title come from env variables
 	@hugo new posts/$(POST_NAME).md
