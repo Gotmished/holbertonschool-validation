@@ -22,6 +22,7 @@ jobs:
           make build-docker
           make build
           make create
+          make package
           ./setup.sh
           make lint
           make unit-tests

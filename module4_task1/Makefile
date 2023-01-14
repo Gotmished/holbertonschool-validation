@@ -5,7 +5,7 @@ build:		## Runs a Docker image
 	@docker run -dp 1313:1313 awesome:build sh -c "hugo; ls ./dist/*"
 
 create:	## Generates website from markdown and configuration files in dist/ directory
-	@hugo
+	@make build
 	@touch awesome-api
 
 post:	## Creates a new blog post whose name and title come from env variables
