@@ -13,7 +13,7 @@ clean:	## Cleans up the content of the dist/ directory
 	@docker run awesome:build /bin/bash -c "hugo; rm -rf dist/* && echo clean"
 
 package:	## Creates a zip file containing binary and dist/ directory
-	@docker run awesome:build /bin/bash -c "hugo; touch awesome-api; zip awesome-website.zip dist/index.html; ls && packaged"
+	@docker run awesome:build /bin/bash -c "hugo; touch awesome-api; zip awesome-website.zip dist/index.html; ls && echo packaged"
 
 unit-tests:
 	@docker run awesome:build /bin/bash -c "hugo; touch coverage-units.out && echo unit"
