@@ -20,6 +20,9 @@ jobs:
           cd module4_task1/
           ./setup.sh
           make build-docker
+          make lint
+          make unit-tests
+          make integration-tests
 
       - name: Archive package
         if: ${{ success() }}
