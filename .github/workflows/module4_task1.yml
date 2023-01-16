@@ -21,6 +21,7 @@ jobs:
           ./setup.sh
           make build-docker
           make lint
+          make clean
           make unit-tests
           make integration-tests
 
