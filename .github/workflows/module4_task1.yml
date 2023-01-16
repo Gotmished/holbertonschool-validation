@@ -23,6 +23,7 @@ jobs:
           make lint
           make clean
           make build
+          make package
           make unit-tests
           make integration-tests
 
