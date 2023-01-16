@@ -17,10 +17,10 @@ jobs:
 
       - name: Docker run
         run: |
-          cd module4_task1
+          cd module4_task1/
           make build-docker
-          make clean
           make lint
+          make clean
           make build
           make unit-tests
           make integration-tests
