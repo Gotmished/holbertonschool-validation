@@ -1,8 +1,9 @@
 build-docker:	## Builds a Docker image
 	@docker build -t awesome:build -f build/Dockerfile .
-	
+
 .PHONY: build
 build:		## Runs a Docker image in a container, builds website and api, and stores it in a package
+	@build-docker
 	@docker run awesome:build /bin/bash -c "hugo; touch awesome-api; zip awesome-website.zip dist/index.html"
 
 create:		## Generates website
