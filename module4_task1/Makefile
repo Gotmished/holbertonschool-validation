@@ -12,22 +12,22 @@ post:	## Creates a new blog post whose name and title come from env variables
 	@sed -i '2s/.*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
 
 clean:	## Cleans up the content of the dist/ directory
-	@docker run awesome:build /bin/bash -c "hugo; rm -rf dist/*"
+	@docker run awesome:build /bin/bash -c "hugo; rm -rf dist/* && echo clean"
 
 package:	## Creates a zip file containing binary and dist/ directory
 	@docker run awesome:build /bin/bash -c "zip awesome-website.zip dist/index.html"
 
 unit-tests:
-	@docker run awesome:build /bin/bash -c "hugo; touch coverage-units.out"
+	@docker run awesome:build /bin/bash -c "hugo; touch coverage-units.out && echo unit"
 
 integration-tests:
-	@docker run awesome:build /bin/bash -c "hugo; touch coverage-integrations.out"
+	@docker run awesome:build /bin/bash -c "hugo; touch coverage-integrations.out && echo integration"
 
 validate:	## Checks the current working directory
 	@docker run awesome:build /bin/bash -c "pwd"
 
 lint:	## Check lint syntax of README and DEPLOY files
-	@docker run awesome:build /bin/bash -c "markdownlint README.md DEPLOY.md"
+	@docker run awesome:build /bin/bash -c "markdownlint README.md DEPLOY.md && echo lint"
 
 help:	## Prints a list of targets and their usage
 	@cat Makefile | grep '##' | tr -d '##' | head -n -1
