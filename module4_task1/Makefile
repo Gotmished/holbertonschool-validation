@@ -24,10 +24,10 @@ integration-tests:
 	@docker run awesome:build /bin/bash -c "hugo; rm -rf dist/*; touch coverage-integrations.out"
 
 validate:	## Checks the current working directory
-	@docker run awesome:build /bin/bash -c "hugo; pwd"
+	@docker run awesome:build /bin/bash -c "pwd"
 
 lint:	## Apply lint to README and DEPLOY files
-	@docker run awesome:build /bin/bash -c "hugo; yamllint README.md DEPLOY.md"
+	@docker run awesome:build /bin/bash -c "markdownlint README.md DEPLOY.md"
 
 help:	## Prints a list of targets and their usage
 	@cat Makefile | grep '##' | tr -d '##' | head -n -1
