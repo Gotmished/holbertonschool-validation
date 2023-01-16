@@ -18,15 +18,15 @@ package:	## Creates a zip file containing binary and dist/ directory
 	@docker run awesome:build /bin/bash -c "zip awesome-website.zip dist/index.html"
 
 unit-tests:
-	@docker run awesome:build /bin/bash -c "hugo; rm -rf dist/*; touch coverage-units.out"
+	@docker run awesome:build /bin/bash -c "hugo; touch coverage-units.out"
 
 integration-tests:
-	@docker run awesome:build /bin/bash -c "hugo; rm -rf dist/*; touch coverage-integrations.out"
+	@docker run awesome:build /bin/bash -c "hugo; touch coverage-integrations.out"
 
 validate:	## Checks the current working directory
 	@docker run awesome:build /bin/bash -c "pwd"
 
-lint:	## Apply lint to README and DEPLOY files
+lint:	## Check lint syntax of README and DEPLOY files
 	@docker run awesome:build /bin/bash -c "markdownlint README.md DEPLOY.md"
 
 help:	## Prints a list of targets and their usage
