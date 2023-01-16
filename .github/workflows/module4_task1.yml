@@ -21,8 +21,6 @@ jobs:
           make clean
           make build-docker
           make build
-          make create
-          ./setup.sh
           make lint
           make unit-tests
           make integration-tests
