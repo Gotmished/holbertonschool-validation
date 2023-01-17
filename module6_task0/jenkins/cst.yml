@@ -1,7 +1,7 @@
 ---
 fileExistenceTests:
   - name: 'plugins.txt'
-    path: './jenkins/'
+    path: './jenkins/plugins.txt'
     shouldExist: true
   - name: 'Java'
     path: './usr/bin/java'
@@ -9,9 +9,10 @@ fileExistenceTests:
 
 fileContentTests:
   - name: 'plugins.txt'
-    path: '/jenkins/'
+    path: './jenkins/plugins.txt'
+    expectedContents: ['*github:*']
 
 commandTests:
   - name: 'Java version test'
     command: 'java -version'
-    expectedOutput: ['openjdk version "11.*.*"']
+    expectedOutput: ['openjdk version "11.*"']
