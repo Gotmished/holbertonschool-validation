@@ -1,5 +1,5 @@
 FROM jenkins/jenkins:lts-jdk11
-WORKDIR /Users/hamish/Documents/VS Code/holbertonschool-validation/module6_task0
+WORKDIR /holbertonschool-validation/module6_task0
 COPY . .
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 COPY --chown=jenkins:jenkins /jenkins/plugins.txt /usr/share/jenkins/ref/plugins.txt
