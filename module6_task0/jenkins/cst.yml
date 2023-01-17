@@ -1,15 +1,15 @@
 ---
 fileExistenceTests:
   - name: 'plugins.txt'
-    path: './jenkins/plugins.txt'
+    path: '/jenkins/plugins.txt'
     shouldExist: true
   - name: 'Java'
-    path: './usr/bin/java'
+    path: '/usr/bin/java'
     shouldExist: true
 
 fileContentTests:
   - name: 'plugins.txt'
-    path: './jenkins/plugins.txt'
+    path: '/jenkins/plugins.txt'
     expectedContents: []
 
 commandTests:
