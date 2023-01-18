@@ -1,0 +1,12 @@
+ssh-agent:1.24.1
+job-dsl:1.81
+configuration-as-code:1569.vb_72405b_80249
+blueocean:1.27.0
+docker-workflow:528.v7c193a_0b_e67c
+git:5.0.0
+git-client:4.0.0
+git-server:99.va_0826a_b_cdfa_d
+github-branch-source:1696.v3a_7603564d04
+ssh-slaves:2.854.v7fd446b_337c9
+pipeline-utility-steps:2.14.0
+ec2:2.0.5
