@@ -5,7 +5,7 @@ build:	## Compiles source code of application to a binary
 	go build -o awesome-api main.go
 	
 run:	## Run application in background
-	go run main.go ./awesome-api >./awesome.log 2>&1 &.
+	go run main.go ./awesome-api >./awesome.log 2>&1 &
 
 stop:	## Stop the application
 	pgrep '^go$' | xargs kill
