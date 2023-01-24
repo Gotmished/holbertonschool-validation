@@ -8,7 +8,7 @@ run:	## Run application in background
 	go run main.go ./awesome-api >./awesome.log 2>&1 &
 
 stop:	## Stop the application
-	pgrep '^go$' | xargs kill
+	pgrep main | xargs kill
 
 clean:	## Deletes the binary and log file
 	rm -rf ./awesome-api
